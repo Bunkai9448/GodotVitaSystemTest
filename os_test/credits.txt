@@ -1,0 +1,27 @@
+Credits.txt
+
+App developer: Bunkai
+https://homebrew-psvita.blogspot.com/search/label/godot
+
+Button sound: FREE BGM "クレイジークッキング" by T.Waraya 
+
+Digimon ilustrations: ART_BOOK_Ver_PENDULUM (Digivice)
+
+GUI screen assets:
+https://godotengine.org/asset-library/asset/890
+
+HUI debug screen assets: https://godotengine.org/asset-library/asset/677
+
+
+
+Ghost sprites:
+https://mikemac2d.itch.io/ghost-pack
+
+Headus font
+https://ggbot.itch.io/headus-font
+
+Spooky BGM:
+https://sirental.itch.io/scary-music-pack
+
+Spooky forest background + tileset:
+https://deepglowing.itch.io/dead-forest-pixel-art-asset
