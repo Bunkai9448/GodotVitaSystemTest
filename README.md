@@ -11,7 +11,7 @@ If you're going to make homebrew for the vita, you can grab the engine and templ
 ## How to use:
 The idea in mind is to use each section as a means to test and tinker with different godot resources, but you can update any existing one to a more complicated versions.
 
-The main folder os_test is the full project with assets, with every subfolder being a new different screen to test
+The main folder os_test is the full project with assets, with every subfolder being a new different screen to test.\
 The liveArea folder is only required for PS Vita projects, to those who want to see a nice bubble and background.
 
 ## Disclaimer
