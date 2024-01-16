@@ -18,4 +18,4 @@ The liveArea folder is only required for PS Vita projects, to those who want to 
 Everything in this repository has been tested, some features work and some don't but nothing should break your machine. However, the files are provided "as is" use them under your own responsibility.
 
 ## About credits and License
-I've used assets with free and open liceses, if you want more info about any of them, go to the "credits.txt" file to know where they come from.
+Although the idea, design and most chunks of code are mine, I've also used assets with free and open licenses, if you want more info about any of them, go to the "credits.txt" file to know where they come from.
