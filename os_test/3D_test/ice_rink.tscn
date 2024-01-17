@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://3D_test/ice_rink.gd" type="Script" id=1]
 [ext_resource path="res://3D_test/ice.material" type="Material" id=2]
 [ext_resource path="res://3D_test/puck.tscn" type="PackedScene" id=3]
+[ext_resource path="res://3D_test/Player.tscn" type="PackedScene" id=4]
 
 [sub_resource type="BoxShape" id=3]
 extents = Vector3( 1, 1.01425, 1 )
@@ -41,45 +42,55 @@ mesh = SubResource( 2 )
 transform = Transform( 1.07047, 0, 0, 0, 1, 0, 0, 0, 0.0298734, -0.000245035, 0, -1.05974 )
 
 [node name="BottomBorder" type="MeshInstance" parent="StaticBodyBorders"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.770229 )
+transform = Transform( 1, 0, 0, 0, 2.0708, 0, 0, 0, 1, -1.60071e-10, 0, 0.770241 )
 mesh = SubResource( 4 )
 skeleton = NodePath("../..")
 
 [node name="CollisionBottom" type="CollisionShape" parent="StaticBodyBorders"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.770229 )
+transform = Transform( 1, 0, 0, 0, 2.0708, 0, 0, 0, 1, -1.60071e-10, 0, 0.738758 )
 shape = SubResource( 5 )
 
 [node name="LeftBorder" type="MeshInstance" parent="StaticBodyBorders"]
-transform = Transform( -0.000452294, -3.36864e-07, 0.0279031, 2.723e-06, 1, 5.28215e-06, -35.8282, 1.80743e-07, -0.625349, 0.986539, 0, 35.5241 )
+transform = Transform( -0.000452294, -3.36864e-07, 0.0279031, 5.6388e-06, 2.0708, 1.09383e-05, -35.8282, 1.80743e-07, -0.62535, 0.95976, 0, 35.5241 )
 mesh = SubResource( 4 )
 skeleton = NodePath("../..")
 
 [node name="CollisionLeft" type="CollisionShape" parent="StaticBodyBorders"]
-transform = Transform( -0.000452294, -3.36864e-07, 0.0279031, 2.723e-06, 1, 5.28218e-06, -35.8282, 1.80743e-07, -0.625349, 0.986539, 0, 35.5241 )
+transform = Transform( -0.000452294, -3.36864e-07, 0.0279031, 5.6388e-06, 2.0708, 1.09384e-05, -35.8282, 1.80743e-07, -0.62535, 0.95976, 0, 35.5241 )
 shape = SubResource( 5 )
 
 [node name="RightBorder" type="MeshInstance" parent="StaticBodyBorders"]
-transform = Transform( -0.00404994, 3.36883e-07, -0.0279814, 2.723e-06, 1, 5.28215e-06, 35.828, -1.26386e-07, 0.620841, -0.977771, 0, 36.2206 )
+transform = Transform( -0.00404994, 3.36883e-07, -0.0279814, 5.6388e-06, 2.0708, 1.09383e-05, 35.828, -1.26386e-07, 0.620841, -0.977772, 0, 36.2206 )
 mesh = SubResource( 4 )
 skeleton = NodePath("../..")
 material/0 = ExtResource( 2 )
 
 [node name="CollisionRight" type="CollisionShape" parent="StaticBodyBorders"]
-transform = Transform( -0.00404994, 3.36883e-07, -0.0279814, 2.723e-06, 1, 5.28218e-06, 35.828, -1.26386e-07, 0.620841, -0.977771, 0, 35.2782 )
+transform = Transform( -0.00404994, 3.36883e-07, -0.0279814, 5.6388e-06, 2.0708, 1.09384e-05, 35.828, -1.26386e-07, 0.620841, -0.98331, 0, 35.2782 )
 shape = SubResource( 5 )
 
 [node name="TopBorder" type="MeshInstance" parent="StaticBodyBorders"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 70.4558 )
+transform = Transform( 1, 0, 0, 0, 2.0708, 0, 0, 0, 1, -1.60071e-10, 0, 70.4559 )
 mesh = SubResource( 4 )
 skeleton = NodePath("../..")
 material/0 = ExtResource( 2 )
 
 [node name="CollisionTop" type="CollisionShape" parent="StaticBodyBorders"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.770233 )
+transform = Transform( 1, 0, 0, 0, 2.0708, 0, 0, 0, 1, -1.60071e-10, 0, 70.3521 )
 shape = SubResource( 5 )
 
 [node name="Puck" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.71227, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.31175, 0.116974 )
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="Skater" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.27905 )
+input_ray_pickable = false
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 18.6707, 11.7157, 0, -0.531517, 0.847048, 0, 56.518, 2.09016 )
