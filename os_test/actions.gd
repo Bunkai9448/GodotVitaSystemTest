@@ -42,7 +42,7 @@ func _on_3D_test_pressed():
 	get_tree().change_scene("res://3D_test/ice_rink.tscn")
 
 
-func _on_AddGlobalMenuItems_pressed():
+func _on_TypingEffects_test_pressed():
 	get_tree().change_scene("res://TypingEffects_test/Node2D.tscn")
 
 
@@ -64,4 +64,6 @@ func _on_DisplayAlert_pressed():
 
 func _on_KillCurrentProcess_pressed():
 	OS.kill(OS.get_process_id())
+
+
 
