@@ -12,8 +12,6 @@ https://godotengine.org/asset-library/asset/890
 
 HUI debug screen assets: https://godotengine.org/asset-library/asset/677
 
-
-
 Ghost sprites:
 https://mikemac2d.itch.io/ghost-pack
 
@@ -25,3 +23,6 @@ https://sirental.itch.io/scary-music-pack
 
 Spooky forest background + tileset:
 https://deepglowing.itch.io/dead-forest-pixel-art-asset
+
+RigidBody 3D controls:
+https://godotengine.org/asset-library/asset/1291

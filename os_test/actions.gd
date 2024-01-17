@@ -38,8 +38,8 @@ func _on_SaveLoad_test_pressed():
 	get_tree().change_scene("res://SaveLoad_test/SaveLoad_screen.tscn")
 
 
-func _on_VibrateDeviceLong_pressed():
-	Input.vibrate_handheld(1000)
+func _on_3D_test_pressed():
+	get_tree().change_scene("res://3D_test/ice_rink.tscn")
 
 
 func _on_AddGlobalMenuItems_pressed():
@@ -66,5 +66,4 @@ func _on_DisplayAlert_pressed():
 
 func _on_KillCurrentProcess_pressed():
 	OS.kill(OS.get_process_id())
-
 

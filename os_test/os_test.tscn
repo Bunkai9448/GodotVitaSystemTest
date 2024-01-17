@@ -133,14 +133,14 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "SaveLoad test"
 
-[node name="VibrateDeviceLong" type="Button" parent="HBoxContainer/Actions/GridContainer"]
+[node name="3D_test" type="Button" parent="HBoxContainer/Actions/GridContainer"]
 margin_left = 227.0
 margin_top = 201.0
 margin_right = 450.0
 margin_bottom = 264.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Vibrate Device (1000 ms)"
+text = "3D test"
 
 [node name="AddGlobalMenuItems" type="Button" parent="HBoxContainer/Actions/GridContainer"]
 margin_top = 268.0
@@ -208,7 +208,7 @@ stream = ExtResource( 6 )
 [connection signal="pressed" from="HBoxContainer/Actions/GridContainer/MoveWindowToForeground" to="HBoxContainer/Actions" method="_on_MoveWindowToForeground_pressed"]
 [connection signal="pressed" from="HBoxContainer/Actions/GridContainer/RequestAttention" to="HBoxContainer/Actions" method="_on_RequestAttention_pressed"]
 [connection signal="pressed" from="HBoxContainer/Actions/GridContainer/SaveLoad_test" to="HBoxContainer/Actions" method="_on_SaveLoad_test_pressed"]
-[connection signal="pressed" from="HBoxContainer/Actions/GridContainer/VibrateDeviceLong" to="HBoxContainer/Actions" method="_on_VibrateDeviceLong_pressed"]
+[connection signal="pressed" from="HBoxContainer/Actions/GridContainer/3D_test" to="HBoxContainer/Actions" method="_on_3D_test_pressed"]
 [connection signal="pressed" from="HBoxContainer/Actions/GridContainer/AddGlobalMenuItems" to="HBoxContainer/Actions" method="_on_AddGlobalMenuItems_pressed"]
 [connection signal="pressed" from="HBoxContainer/Actions/GridContainer/RemoveGlobalMenuItem" to="HBoxContainer/Actions" method="_on_RemoveGlobalMenuItem_pressed"]
 [connection signal="pressed" from="HBoxContainer/Actions/GridContainer/GetClipboard" to="HBoxContainer/Actions" method="_on_GetClipboard_pressed"]
