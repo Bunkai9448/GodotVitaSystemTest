@@ -142,13 +142,13 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "3D test"
 
-[node name="AddGlobalMenuItems" type="Button" parent="HBoxContainer/Actions/GridContainer"]
+[node name="TypingEffects_test" type="Button" parent="HBoxContainer/Actions/GridContainer"]
 margin_top = 268.0
 margin_right = 223.0
 margin_bottom = 331.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Add Global Menu Items"
+text = "Typing effects test"
 
 [node name="RemoveGlobalMenuItem" type="Button" parent="HBoxContainer/Actions/GridContainer"]
 margin_left = 227.0
@@ -209,7 +209,7 @@ stream = ExtResource( 6 )
 [connection signal="pressed" from="HBoxContainer/Actions/GridContainer/RequestAttention" to="HBoxContainer/Actions" method="_on_RequestAttention_pressed"]
 [connection signal="pressed" from="HBoxContainer/Actions/GridContainer/SaveLoad_test" to="HBoxContainer/Actions" method="_on_SaveLoad_test_pressed"]
 [connection signal="pressed" from="HBoxContainer/Actions/GridContainer/3D_test" to="HBoxContainer/Actions" method="_on_3D_test_pressed"]
-[connection signal="pressed" from="HBoxContainer/Actions/GridContainer/AddGlobalMenuItems" to="HBoxContainer/Actions" method="_on_AddGlobalMenuItems_pressed"]
+[connection signal="pressed" from="HBoxContainer/Actions/GridContainer/TypingEffects_test" to="HBoxContainer/Actions" method="_on_AddGlobalMenuItems_pressed"]
 [connection signal="pressed" from="HBoxContainer/Actions/GridContainer/RemoveGlobalMenuItem" to="HBoxContainer/Actions" method="_on_RemoveGlobalMenuItem_pressed"]
 [connection signal="pressed" from="HBoxContainer/Actions/GridContainer/GetClipboard" to="HBoxContainer/Actions" method="_on_GetClipboard_pressed"]
 [connection signal="pressed" from="HBoxContainer/Actions/GridContainer/SetClipboard" to="HBoxContainer/Actions" method="_on_SetClipboard_pressed"]

@@ -26,3 +26,9 @@ https://deepglowing.itch.io/dead-forest-pixel-art-asset
 
 RigidBody 3D controls:
 https://godotengine.org/asset-library/asset/1291
+
+TextEffects code: 
+https://gist.github.com/EricEzaM/c8d3cd4e3f031df1191dfe45b183b69f
+
+Courier Prime Font:
+https://fonts.google.com/specimen/Courier+Prime/about

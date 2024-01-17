@@ -43,9 +43,7 @@ func _on_3D_test_pressed():
 
 
 func _on_AddGlobalMenuItems_pressed():
-	OS.global_menu_add_item("Hello", "World", 0, null)
-	OS.global_menu_add_separator("Hello")
-	OS.global_menu_add_item("Hello2", "World2", 0, null)
+	get_tree().change_scene("res://TypingEffects_test/Node2D.tscn")
 
 
 func _on_RemoveGlobalMenuItem_pressed():
