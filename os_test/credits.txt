@@ -32,3 +32,6 @@ https://gist.github.com/EricEzaM/c8d3cd4e3f031df1191dfe45b183b69f
 
 Courier Prime Font:
 https://fonts.google.com/specimen/Courier+Prime/about
+
+Assets for player in 3D, modified from:
+https://kaylousberg.itch.io/kaykit-skeletons
