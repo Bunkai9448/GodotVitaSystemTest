@@ -4,7 +4,7 @@ extends Node2D
 var ghostPos = Vector2(0,0)
 
 
-func _physics_process(_delta):
+func _process(_delta):
 	if Input.is_action_pressed("ui_start"):
 		get_tree().change_scene("res://os_test.tscn")
 		
