@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://3D_test/Player.material" type="Material" id=1]
+[ext_resource path="res://3D_test/VehicleBody.gd" type="Script" id=2]
 [ext_resource path="res://3D_test/Player.gd" type="Script" id=6]
 
 [sub_resource type="SpatialMaterial" id=2]
@@ -200,41 +201,57 @@ surfaces/2 = {
 }
 
 [sub_resource type="CapsuleShape" id=12]
+height = 0.002
 
 [node name="Player" type="RigidBody"]
 script = ExtResource( 6 )
 
-[node name="character_skeleton_archer_head" type="MeshInstance" parent="."]
+[node name="VehicleBody" type="VehicleBody" parent="."]
+script = ExtResource( 2 )
+
+[node name="VehicleWheel" type="VehicleWheel" parent="VehicleBody"]
+wheel_roll_influence = 0.0
+wheel_radius = 0.0
+wheel_rest_length = 0.0
+wheel_friction_slip = 0.0
+
+[node name="character_skeleton_archer_head" type="MeshInstance" parent="VehicleBody/VehicleWheel"]
 transform = Transform( 0.707067, -1.57748e-05, 0.000873158, 2.22385e-05, 0.563234, -0.00591387, -0.000391324, 0.00211173, 0.948689, -2.94397e-05, 0.347831, 0.0145971 )
 mesh = SubResource( 4 )
 blend_shapes/Angry = 0.0
 blend_shapes/Happy = 0.0
 
-[node name="character_skeleton_archer_eyes" type="MeshInstance" parent="character_skeleton_archer_head"]
+[node name="character_skeleton_archer_eyes" type="MeshInstance" parent="VehicleBody/VehicleWheel/character_skeleton_archer_head"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.62939e-06, 0.424515, 0.258715 )
 mesh = SubResource( 5 )
 
-[node name="character_skeleton_archer_hood" type="MeshInstance" parent="character_skeleton_archer_head"]
+[node name="character_skeleton_archer_hood" type="MeshInstance" parent="VehicleBody/VehicleWheel/character_skeleton_archer_head"]
 mesh = SubResource( 6 )
 
-[node name="character_skeleton_archer_mask" type="MeshInstance" parent="character_skeleton_archer_head"]
+[node name="character_skeleton_archer_mask" type="MeshInstance" parent="VehicleBody/VehicleWheel/character_skeleton_archer_head"]
 mesh = SubResource( 7 )
 
-[node name="character_none_body" type="MeshInstance" parent="."]
+[node name="character_none_body" type="MeshInstance" parent="VehicleBody"]
 transform = Transform( -6.95518e-06, -0.241752, 0.000183465, 0.24758, -7.60897e-06, -0.0012426, 0.000928252, 0.000133797, 0.199335, 2.94397e-05, 0.108073, 0.0703869 )
 mesh = SubResource( 8 )
+skeleton = NodePath("../..")
 material/0 = ExtResource( 1 )
 
-[node name="character_skeleton_mage_armLeft" type="MeshInstance" parent="character_none_body"]
+[node name="character_skeleton_mage_armLeft" type="MeshInstance" parent="VehicleBody/character_none_body"]
 transform = Transform( -6.41821e-08, 2.27495, 0, -2.92477, -1.98079e-07, 0, 0, 0, 4.75924, 0.805506, -0.596771, -0.284381 )
 mesh = SubResource( 9 )
 
-[node name="character_skeleton_mage_armRight" type="MeshInstance" parent="character_none_body"]
+[node name="character_skeleton_mage_armRight" type="MeshInstance" parent="VehicleBody/character_none_body"]
 transform = Transform( -6.41821e-08, 2.27495, 0, -2.92477, -1.98079e-07, 0, 0, 0, 4.75924, 0.805506, 0.596793, -0.284381 )
 mesh = SubResource( 10 )
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
+[node name="WheelRequired" type="CollisionShape" parent="VehicleBody"]
+transform = Transform( 0.0688919, -0.000354674, -8.96303e-07, -1.11013e-05, 0.0100042, -0.0666441, 0.00181991, 0.506507, -0.00625544, 0, 0.398072, 0.058663 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape_Real" type="CollisionShape" parent="."]
 transform = Transform( 0.545007, -0.00280584, -7.0907e-06, -6.16187e-05, 0.0555295, -0.369915, 0.00181991, 0.506507, -0.00625544, 0, 0.398072, 0.058663 )
+visible = false
 shape = SubResource( 12 )
 
 [node name="RayCast" type="RayCast" parent="."]
