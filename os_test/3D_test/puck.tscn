@@ -9,12 +9,13 @@ height = 2.9071
 
 [node name="Puck" type="RigidBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.147374, 0 )
+axis_lock_linear_y = true
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 0.396232, 0, 0, 0, -0.424659, 0, 0, 0, 0.487013, 0, 0.227677, 0 )
+transform = Transform( 0.235962, 0, 0, 0, -0.0756478, 0, 0, 0, 0.248971, 0, 0.226943, -0.0400862 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 0.0752191, 0, 0, 0, 0.0629055, 0, 0, 0, 0.07853, 0, 0.224046, 0 )
+transform = Transform( 0.197424, 4.9795e-07, 0.000995812, -8.03543e-07, 0.122364, 2.42361e-08, -0.0010096, -1.77718e-08, 0.194728, 0, 0.22478, -0.0406959 )
 mesh = SubResource( 2 )
 material/0 = ExtResource( 1 )
