@@ -9,17 +9,19 @@ https://github.com/Bunkai9448/GodotVitaSystemTest
 Button sound: 
 FREE BGM "クレイジークッキング" by T.Waraya 
 
-Digimon ilustrations: ART_BOOK_Ver_PENDULUM (Digivice)
+Digimon ilustrations: 
+ART_BOOK_Ver_PENDULUM (Digivice)
 
 GUI screen assets:
 https://godotengine.org/asset-library/asset/890
 
-HUI debug screen assets: https://godotengine.org/asset-library/asset/677
+HUI debug screen assets: 
+https://godotengine.org/asset-library/asset/677
 
 Ghost sprites:
 https://mikemac2d.itch.io/ghost-pack
 
-Headus font
+Headus font:
 https://ggbot.itch.io/headus-font
 
 Spooky BGM:
