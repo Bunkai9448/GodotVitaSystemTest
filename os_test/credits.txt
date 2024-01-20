@@ -3,6 +3,8 @@ Credits.txt
 App developer: Bunkai
 https://homebrew-psvita.blogspot.com/search/label/godot
 
+Project's Repo: https://github.com/Bunkai9448/GodotVitaSystemTest
+
 Button sound: FREE BGM "クレイジークッキング" by T.Waraya 
 
 Digimon ilustrations: ART_BOOK_Ver_PENDULUM (Digivice)
