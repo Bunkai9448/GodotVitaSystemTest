@@ -1,0 +1,119 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://3D_test/Black.material" type="Material" id=1]
+
+[sub_resource type="CylinderShape" id=1]
+height = 0.485475
+
+[sub_resource type="CylinderMesh" id=10]
+
+[sub_resource type="CylinderMesh" id=11]
+
+[sub_resource type="CylinderMesh" id=9]
+
+[sub_resource type="BoxShape" id=6]
+
+[sub_resource type="CubeMesh" id=5]
+
+[sub_resource type="BoxShape" id=7]
+
+[sub_resource type="BoxShape" id=8]
+
+[node name="GoalNet" type="Spatial"]
+transform = Transform( -0.297622, 6.43179e-05, -0.0164624, 4.2674e-05, 0.298077, 0.000393075, 0.0164625, 0.000390117, -0.297622, -1.69075, 1.0944, -2.75483 )
+
+[node name="StaticBody_postL" type="StaticBody" parent="."]
+transform = Transform( 1, 0.000358067, 2.18861e-08, 1.62056e-05, 24.5963, 0.000149272, 1.95578e-08, 0.00329819, 1, 0.0605549, 2.71548, -11.8076 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody_postL"]
+transform = Transform( 1, -4.36557e-11, 0, -8.52651e-14, 0.882725, 0, 0, -1.86265e-09, 1, 0, 0.0172921, 0 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody_postL"]
+transform = Transform( 0.995899, 2.18279e-11, -0.0461101, -9.09495e-13, 0.198821, 1.81899e-12, -0.0461101, 0, 0.481609, -0.499742, 5.52833e-06, 0.0350447 )
+mesh = SubResource( 10 )
+skeleton = NodePath("../CollisionShape")
+material/0 = ExtResource( 1 )
+
+[node name="StaticBody_postR" type="StaticBody" parent="."]
+transform = Transform( 1, 0.000358067, 2.18861e-08, 1.62056e-05, 24.5963, 0.000149272, 1.95578e-08, 0.00329819, 1, 0.119146, 2.71378, -23.2258 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody_postR"]
+transform = Transform( 1, 0, 0, 0, 0.882725, 0, 0, 0, 1, 0, 0.0172921, 0 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody_postR"]
+transform = Transform( 0.995899, 0, -0.0461101, 0, 0.206704, 0, -0.0461101, 0, 0.481609, -0.481317, 0, 0.164381 )
+mesh = SubResource( 11 )
+skeleton = NodePath("../CollisionShape")
+material/0 = ExtResource( 1 )
+
+[node name="StaticBody_postZ" type="StaticBody" parent="."]
+transform = Transform( 0.944786, -0.245828, 0.00523739, -0.00511146, 0.67075, 0.944762, -0.00812321, -28.8828, 0.014728, 0.0933352, 8.5513, -16.882 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody_postZ"]
+transform = Transform( 0.999301, -0.959263, 0.000561425, 0.00122347, 0.838204, -1.90272e-05, -0.000822802, -0.015802, 0.999991, 0, 0.017292, 0 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody_postZ"]
+transform = Transform( 0.920339, -0.00230476, 0.00393063, 0.0115681, 0.21528, -0.00172374, 0.00482976, -0.0730426, 0.587973, -0.118371, 0.0237975, -0.868301 )
+mesh = SubResource( 9 )
+skeleton = NodePath("../CollisionShape")
+material/0 = ExtResource( 1 )
+
+[node name="StaticBody_netL" type="StaticBody" parent="."]
+transform = Transform( 0.663114, -0.0040897, 0.00144893, 0.000405682, 28.3114, 0.0746864, 0.00143, -1.38996, 0.998176, 0.0786169, 2.32758, -11.8105 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody_netL"]
+transform = Transform( 3.90199, -0.00183216, -0.186668, -1.59642e-05, 0.182463, 7.72125e-07, -0.0585878, 7.86548e-06, 0.482213, 4.0683, 0.0172671, 0.144845 )
+shape = SubResource( 6 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="StaticBody_netL"]
+transform = Transform( 3.90199, -0.00183216, -0.186668, -1.59642e-05, 0.182463, 7.72126e-07, -0.0585878, 7.86595e-06, 0.482213, 4.0683, 0.0172671, 0.144846 )
+visible = false
+mesh = SubResource( 5 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="StaticBody_netR" type="StaticBody" parent="."]
+transform = Transform( 0.663114, 0.00447939, 0.00144007, -7.19118e-05, 25.7049, -0.0327694, 0.00144885, 0.689283, 0.999553, 0.101027, 2.70174, -23.2235 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody_netR"]
+transform = Transform( 3.90199, -0.00183216, -0.186668, -1.80851e-05, 0.206704, 8.74707e-07, -0.0585878, 7.86642e-06, 0.482213, 4.0683, -2.83122e-05, 0.144846 )
+visible = false
+mesh = SubResource( 5 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody_netR"]
+transform = Transform( 3.90199, -0.00183216, -0.186668, -1.80851e-05, 0.206704, 8.74705e-07, -0.0585878, 7.86688e-06, 0.482213, 4.0683, -2.83122e-05, 0.144846 )
+shape = SubResource( 7 )
+
+[node name="StaticBody_netZ" type="StaticBody" parent="."]
+transform = Transform( 0.590859, 0.039195, 0.00327025, -0.00540196, 0.914996, 0.993431, 0.0067731, -30.5638, 0.0220666, 0.0862066, 7.67299, -17.422 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody_netZ"]
+transform = Transform( 3.90199, -0.00183216, -0.186668, -1.80852e-05, 0.206704, 8.74745e-07, -0.0585878, 7.88271e-06, 0.482213, 4.0683, -2.83117e-05, 0.144847 )
+visible = false
+shape = SubResource( 8 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="StaticBody_netZ"]
+transform = Transform( 3.90199, -0.00183216, -0.186668, -1.80852e-05, 0.206704, 8.74716e-07, -0.0585878, 7.86781e-06, 0.482213, 4.0683, -2.83117e-05, 0.144847 )
+visible = false
+mesh = SubResource( 5 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="StaticBody_netZ2" type="StaticBody" parent="."]
+transform = Transform( 0.00151497, -0.413534, 0.993426, -1.21562, -0.319028, 0.0164652, 0.00734798, -28.7924, -0.0203841, 4.81304, 7.63173, -17.4424 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody_netZ2"]
+transform = Transform( 3.90199, -0.00183216, -0.186668, -1.80852e-05, 0.206704, 8.74745e-07, -0.0585878, 7.88271e-06, 0.482213, 4.0683, -2.83117e-05, 0.144847 )
+shape = SubResource( 8 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="StaticBody_netZ2"]
+transform = Transform( 3.90199, -0.00183216, -0.186668, -1.80852e-05, 0.206704, 8.74716e-07, -0.0585878, 7.86781e-06, 0.482213, 4.0683, -2.83117e-05, 0.144847 )
+visible = false
+mesh = SubResource( 5 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
