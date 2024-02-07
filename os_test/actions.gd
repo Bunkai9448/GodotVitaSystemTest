@@ -10,8 +10,11 @@ func _on_OpenShellFolder_pressed():
 	if path == "":
 		# Windows-specific.
 		path = OS.get_environment("USERPROFILE")
-
 	OS.shell_open(path)
+
+
+func _on_Audio_test_pressed():
+	get_tree().change_scene("res://Audio_test/Node2D.tscn")
 
 
 func ChangeWindow_toGUI():
@@ -64,6 +67,3 @@ func _on_DisplayAlert_pressed():
 
 func _on_KillCurrentProcess_pressed():
 	OS.kill(OS.get_process_id())
-
-
-

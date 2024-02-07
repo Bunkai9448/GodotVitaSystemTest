@@ -91,13 +91,13 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Open Shell (folder)"
 
-[node name="AudioButton" type="Button" parent="HBoxContainer/Actions/GridContainer"]
+[node name="Audio_test" type="Button" parent="HBoxContainer/Actions/GridContainer"]
 margin_top = 67.0
 margin_right = 223.0
 margin_bottom = 130.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Audio Button"
+text = "Audio_test"
 
 [node name="ChangeWindow_toGUI" type="Button" parent="HBoxContainer/Actions/GridContainer"]
 margin_left = 227.0
@@ -203,7 +203,7 @@ stream = ExtResource( 6 )
 
 [connection signal="pressed" from="HBoxContainer/Actions/GridContainer/OpenShellWeb" to="HBoxContainer/Actions" method="_on_OpenShellWeb_pressed"]
 [connection signal="pressed" from="HBoxContainer/Actions/GridContainer/OpenShellFolder" to="HBoxContainer/Actions" method="_on_OpenShellFolder_pressed"]
-[connection signal="pressed" from="HBoxContainer/Actions/GridContainer/AudioButton" to="AudioTest" method="_on_AudioButton_pressed"]
+[connection signal="pressed" from="HBoxContainer/Actions/GridContainer/Audio_test" to="HBoxContainer/Actions" method="_on_Audio_test_pressed"]
 [connection signal="pressed" from="HBoxContainer/Actions/GridContainer/ChangeWindow_toGUI" to="HBoxContainer/Actions" method="ChangeWindow_toGUI"]
 [connection signal="pressed" from="HBoxContainer/Actions/GridContainer/MoveWindowToForeground" to="HBoxContainer/Actions" method="_on_MoveWindowToForeground_pressed"]
 [connection signal="pressed" from="HBoxContainer/Actions/GridContainer/RequestAttention" to="HBoxContainer/Actions" method="_on_RequestAttention_pressed"]
