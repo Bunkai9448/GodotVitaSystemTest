@@ -5,13 +5,16 @@ var messages = [
 	"Courier Prime is a new take on IBM's Courier which was designed in 1956 by Howard Kettler.\n\nIt's a monospaced family, designed specifically for screenplays. Overall the family is more refined than its predecessor. The serifs are crisper and less rounded. The counters are subtly wider. The bold weight is a bit darker and the italics are more cursive."
 ]
 
+onready var message2 = str(OS.get_user_data_dir ( ))
+
 var char_timer: Timer
 var message_timer: Timer
 var current_message_idx = 0
 
 func _ready():
 	visible_characters = 0
-	text = messages[current_message_idx]
+#	text = messages[current_message_idx]
+	text = message2
 	
 	# Timer to increment number of chars visible
 	char_timer = Timer.new()
@@ -41,5 +44,5 @@ func next_message():
 	current_message_idx += 1
 	if current_message_idx < messages.size():
 		visible_characters = 0
-		text = messages[current_message_idx]
+#		text = messages[current_message_idx]
 		char_timer.start()
