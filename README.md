@@ -7,6 +7,7 @@ This project is focused on creating homebrew for the PS Vita. However you should
 Grab the files in the repository or make a fork and open the project with your godot engine, and you're set.
 
 If you're going to make homebrew for the vita, you can grab the engine and templates here: https://github.com/SonicMastr/godot-vita
+If there is not a release newer than July 13rd made use the one from here to have time and a few bug fixes: https://github.com/SonicMastr/godot-vita/issues/37#issuecomment-2211462609
 
 ## How to use:
 The idea in mind is to use each section as a means to test and tinker with different godot resources, but you can update any existing one to a more complicated versions.
